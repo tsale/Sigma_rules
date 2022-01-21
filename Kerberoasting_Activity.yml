@@ -1,5 +1,8 @@
 title: Kerberoasting Activity - Initial query
-description: This rule will collect the data needed to start looking into possible kerberoasting activity. Further analysis or computation within the query is needed focusing on requests from one specific host/IP towards multiple service names within a time period of 5 seconds. You can then set a threshold for the number of requests and time between the requests to turn this into an alert.
+description: This rule will collect the data needed to start looking into possible kerberoasting activity.
+             Further analysis or computation within the query is needed focusing on requests from one specific host/IP towards 
+             multiple service names within a time period of 5 seconds. You can then set a threshold for the number of requests 
+             and time between the requests to turn this into an alert.
 date: 2022/01/21
 author: \@kostastsale
 references: 
