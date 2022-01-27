@@ -38,3 +38,6 @@ detection:
 falsepositives:
     - Uknown
 level: High
+tags:
+    - attack.privilege_escalation
+    - attack.t1068
