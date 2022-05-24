@@ -1,4 +1,4 @@
-title: HH LOLBA executing .chm files 
+title: HH.exe LOLBA executing .chm files 
 description: Detecting the execution of hh.exe and the follow up activity for downloading or executing 
   second stage payloads based. This is based malspam activity delivering Remote Access Trojans via initial .chm
   payloads.
