@@ -5,7 +5,7 @@ description: Detecting the execution of hh.exe and the follow up activity for do
 status: experimental
 references:
   - https://www.virustotal.com/gui/file/f0c20d4ea2e2cc1d3c9df58b1a4854f9e3b761b7cd0c26860559289c74a8d50f/behavior/C2AE
-  - https://tria.ge/220518-rxm84aagh2/behavioral1
+  - https://tria.ge/220520-cbrbasebb7/behavioral2
   - https://www.socinvestigation.com/threat-actors-abuse-microsofts-html-help-file-to-deliver-malware/
 author: '@Kostastsale'
 date: 2022/05/24
