@@ -1,5 +1,6 @@
 title: Dumpbin LOLBin use for proxying execution via link.exe 
-description: Using dumpbin.exe, a windows binary that is installed along side visual studio versions. When dumbin.exe is executed, it is calling link.exe without checking the legitimacy of the link.exe named binary in the same directory. 
+description: Using dumpbin.exe, a windows binary that is installed along side visual studio versions. When dumbin.exe is executed, 
+             it is calling link.exe without checking the legitimacy of the link.exe named binary in the same directory. 
 status: experimental
 date: 2022/08/25
 author: \@kostastsale
