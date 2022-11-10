@@ -1,10 +1,14 @@
-title: Detects attempts to disable AMSI in the commandline
-status: Experimental
-description: It is possible to bypass AMSI by disabling it before loading the main payload
+title: PowerShell AMSI Bypass Pattern
+status: experimental
+description: Detects attempts to disable AMSI in the commandline. It is possible to bypass AMSI by disabling it before loading the main payload.
 author: '@Kostastsale'
 references: 
   - https://www.mdsec.co.uk/2018/06/exploring-powershell-amsi-and-logging-evasion/
 date: 2022/11/04
+tags:
+  - attack.defense_evasion
+  - attack.t1562.001
+  - attack.execution
 logsource:
   product: windows
   category: process_creation
@@ -20,10 +24,5 @@ detection:
       - 'NonPublic,Static'
   condition: selection1
 falsepositives:
-  - Uknown
+  - Unknown
 level: high
-tags:
-  - attack.defense_evasion
-  - attack.t1562.001
-  - attack.execution
-  - T1059.001
