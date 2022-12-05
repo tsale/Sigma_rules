@@ -1,4 +1,4 @@
-title: Using Emojis to evade EDRs
+title: Using Emojis to evade detection
 status: Experimental (depending how many more emojis are out there)
 description: Detects emojis in the command line
 author: \@Kostastsale, \@TheDFIRReport
