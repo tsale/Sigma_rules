@@ -14,12 +14,6 @@ execution scenarios.
 When the malicious script is double-clicked, it will be extracted to the respected directories as signified by the CommandLine
 on each of the three Selections. It will then be executed using the relevant script interpreter.
 
-Example Execution 
-  ParentProcess -> WinRar - C:\Program Files\WinRAR\WinRAR.exe C:\Users\admin\AppData\Local\Temp\Rar$DIa3524.16898\documenti-aziendali.zip
-  ChildProcess  ->-> Wscript - C:\Windows\System32\WScript.exe C:\Users\admin\AppData\Local\Temp\Rar$DIa3952.17158\fiscale.wsf
-
-
-
 ** During my testing, batch files produced a lot of noise, as many applications appear to bundle them as part of their installation
 process. You should baseline your environment and generate a new query excluding the noisy and expected activity."
 status: experimental
