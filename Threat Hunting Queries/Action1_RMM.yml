@@ -18,7 +18,7 @@ description: >
     Index="<myindex>" source="<mysource>" Image="*\action1_agent.exe" ParentCommandLine="*runaction:0" | rex field=ParentCommandLine "(?<=Deploy_App__)(?<AppName>.*(?=(\_1)))"
 
     
-    Hunting Opportunity 2 - Remote Sessions On Out Of Office
+    Hunting Opportunity 2 - Remote Sessions On Out Of Office Hours
     ----
     If you have admins within your environment using remote sessions to administer
     endpoints, you can create a threat-hunting query and modify the time of the
