@@ -12,10 +12,7 @@ execution scenarios.
   3. Compressed file opened using native windows File Explorer capabilities. 
 
 When the malicious script is double-clicked, it will be extracted to the respected directories as signified by the CommandLine
-on each of the three Selections. It will then be executed using the relevant script interpreter.
-
-** During my testing, batch files produced a lot of noise, as many applications appear to bundle them as part of their installation
-process. You should baseline your environment and generate a new query excluding the noisy and expected activity."
+on each of the three Selections. It will then be executed using the relevant script interpreter."
 status: experimental
 date: 2023/02/15
 author: '@kostastsale'
@@ -60,7 +57,8 @@ detection:
         - '*\appdata\local\temp\*.zip\*'
     condition: ChildProcess and ScriptExtention and (Selection1 OR Selection2 OR Selection3)
 falsepositives:
-    - "Some false positives may come up depending on your environment. All results should be investigated thoroughly before
+    - "During my testing, batch files produced a lot of noise, as many applications appear to bundle them as part of their installation
+process. You should baseline your environment and generate a new query excluding the noisy and expected activity. Some false positives may come up depending on your environment. All results should be investigated thoroughly before
     filtering out results."
 level: medium
 tags:
