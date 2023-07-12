@@ -17,7 +17,7 @@ detection:
       ParentCommandLine|contains|all:
         - ' start '
         - ' /launch:'
-    condition: selection1 and selection2
+    condition: selection1
 falsepositives:
     - Uknown
 level: medium
