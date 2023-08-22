@@ -26,5 +26,5 @@ falsepositives:
     - Uknown
 level: high
 tags:
-    - attack.Execution
-    - attack.T1137.001
+    - attack.Defense-Evansion
+    - attack.T1562.001
