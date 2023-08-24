@@ -18,7 +18,7 @@ detection:
           - 'software\policies\microsoft\office\*\excel\security'
           - 'pythonfunctionwarnings*0'
     selection2:
-        CommanLine|contains:
+        CommandLine|contains:
           - 'reg*add'
           - 'Set-ItemProperty'
     condition: selection1 and selection2
