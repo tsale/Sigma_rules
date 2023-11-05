@@ -1,5 +1,5 @@
 title: Disabled AV On Dev Drive via Registry
-description: Detects the execution registry change that enables a Dev Drive without allowing AV to access the created drive.
+description: Detects the execution registry change that enables a Dev Drive without allowing AV to access the created drive. This technique is available starting with Windows 11.
 status: experimental
 date: 2023/11/05
 author: \@kostastsale
