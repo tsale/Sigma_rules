@@ -1,5 +1,5 @@
 title: Enabling Dev Drive With Disabled AV
-description: Detects the execution of fsutil.exe to enable a Dev Drive with an argument that disables the AV on the created drive.
+description: Detects the execution of fsutil.exe to enable a Dev Drive with an argument that disables the AV on the created drive. This technique is available starting with Windows 11.
 status: experimental
 date: 2023/11/05
 author: \@kostastsale
