@@ -13,9 +13,9 @@ detection:
         Image|endswith:
             - '\fsutil.exe'
         CommandLine|contains|all:
-            - ' devdrv '
-            - ' enable '
-            - ' /dissallowAv '
+            - ' devdrv'
+            - ' enable'
+            - ' /dissallowAv'
     condition: selection1
 falsepositives:
     - Unlikely
