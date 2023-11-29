@@ -15,7 +15,7 @@ detection:
         CommandLine|contains|all:
             - ' devdrv'
             - ' enable'
-            - ' /dissallowAv'
+            - ' /disallowAv'
     condition: selection1
 falsepositives:
     - Unlikely
