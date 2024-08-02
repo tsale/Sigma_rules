@@ -1,0 +1,24 @@
+title: Detection of Suspicious triggering of ErrorHandler.cmd Execution
+id: a9b8c7d6-4e5f-48a6-b2b2-3f5d72a847c1
+status: experimental
+description: Detects the persistence mechanism of triggering ErrorHandler.cmd execution upon the execution of specific binaries inside the oobe directory.
+references:
+  - https://www.hexacorn.com/blog/2022/01/16/beyond-good-ol-run-key-part-135/
+author: '@kostastsale'
+date: 2024/08/02
+tags:
+  - attack.execution
+  - attack.persistence
+logsource:
+  category: process_creation
+  product: windows
+detection:
+  selection:
+    CommandLine|endswith:
+      - 'ErrorHandler.cmd'
+    ParentImage|endswith:
+      - '\System32\oobe\*.exe'
+  condition: selection
+falsepositives:
+  - Uknown
+level: high
