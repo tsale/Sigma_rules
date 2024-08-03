@@ -1,7 +1,7 @@
 title: VSDiagnostics used for proxying execution malicious binaries
-description: Detects the subvert execution of malicious payloads using vsdiagnostics.exe. VSDiagnostics.exe is an executable part of the Microsoft Visual Studio. 
-
-Threat actors can use the start to start a new session in combination with the /launch and /launchargs parameters to execute a malicious payload on disk.
+description: >
+    Detects the subvert execution of malicious payloads using vsdiagnostics.exe. VSDiagnostics.exe is an executable part of the Microsoft Visual Studio.
+    Threat actors can use the start to start a new session in combination with the /launch and /launchargs parameters to execute a malicious payload on disk.
 status: experimental
 date: 2023/07/12
 author: '@kostastsale'
