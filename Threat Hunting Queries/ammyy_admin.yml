@@ -1,0 +1,21 @@
+title: Detecting Ammy Admin RMM Agent Execution
+status: experimental
+description: Detects the execution of the Ammy Admin RMM agent for remote management.
+author: '@kostastsale'
+date: 2024/08/05
+tags:
+  - attack.execution
+  - attack.persistence
+logsource:
+  category: process_creation
+  product: windows
+detection:
+  selection:
+    Image|endswith:
+      - '\rundll32.exe'
+    CommandLine|contains:
+      - 'AMMYY\aa_nts.dll",run'
+  condition: selection
+falsepositives:
+  - Legitimate use of Ammy Admin RMM agent for remote management by admins.
+level: medium
