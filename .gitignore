@@ -1,3 +1,4 @@
 .cache/
 .replit
+.vscode/
 replit.nix
