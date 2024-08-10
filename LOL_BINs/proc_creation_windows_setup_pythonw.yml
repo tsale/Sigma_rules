@@ -1,0 +1,29 @@
+title: Execute Python Scripts via Python Installer Binary
+id: 6c6b0b7a-481d-4aca-84be-963e6cd2e302
+description: Detects the execution of malicious Python scripts from the AppData directory after the execution of the setup.exe installation package. Some installation packages allow for post-installation scripts to be run. A malicious actor could modify these scripts or add their own to execute malicious actions after the legitimate software is installed.
+status: experimental
+date: 2023/10/26
+author: '@kostastsale'
+references:
+    - https://twitter.com/xorJosh/status/1717504124764233944
+logsource:
+    category: process_creation
+    product: windows
+detection:
+    selection1:
+        Image|endswith:
+            - '\pythonw.exe'
+        ParentImage|endswith:
+            - '\setup.exe'
+        CommandLine|contains|all:
+            - '\AppData\'
+    selection2:
+        CommandLine|endswith:
+          - '.py'
+    condition: selection1 and selection2
+falsepositives:
+    - Unlikely
+level: high
+tags:
+    - attack.Defense.Evasion
+    - attack.T1202

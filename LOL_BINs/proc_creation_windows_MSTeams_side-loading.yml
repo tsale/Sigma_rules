@@ -1,0 +1,30 @@
+title: MSTeams exe side-loading - Update.exe
+id: dafa6fd4-dcda-4ef2-81c9-4bf33ce4c299
+description: Detects execution of side-loaded executable via the update.exe, part microsoft teams' application binary.
+status: experimental
+date: 2022/01/12
+author: \@kostastsale
+references:
+    - https://twitter.com/misconfig/status/1481198346379436035
+    - https://twitter.com/Kostastsale/status/1481438427878858755
+    - https://github.com/Squirrel/Squirrel.Windows/blob/0d1250aa6f0c25fe22e92add78af327d1277d97d/src/Update/Program.cs#L123
+logsource:
+    category: process_creation
+    product: windows
+detection:
+    selection1:
+        ParentCommandLine|contains|all:
+            - 'AppData\Local\Microsoft\Teams\Update.exe'
+            - '--processStart *.exe'
+        ParentImage|endswith:
+            - 'update.exe'
+    filter:
+        Image|endswith:
+            - 'Teams.exe'
+    condition: selection1 and not filter
+falsepositives:
+    - Unlikely
+level: high
+tags:
+    - attack.Defense Evasion
+    - attack.T1218

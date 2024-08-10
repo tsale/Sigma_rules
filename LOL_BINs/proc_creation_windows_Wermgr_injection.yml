@@ -1,0 +1,24 @@
+title: Wermgr.exe spawning without command line arguments
+id: 735e43b1-8533-4b37-91a6-5bf89a671884
+description: Wermgr.exe should not spawn without any command line arguments. Sometimes malware are using process injection to masquerade their malicious activities and evade detection.
+references:
+    - https://x.com/Kostastsale/status/1570178125400776705
+status: experimental
+date: 2022/09/14
+author: '@kostastsale'
+logsource:
+    category: process_creation
+    product: windows
+detection:
+    selection1:
+        Image|endswith:
+            - '\wermgr.exe'
+        CommandLine|endswith:
+            - '\wermgr.exe'
+    condition: selection1
+falsepositives:
+    - Unlikely
+level: high
+tags:
+    - attack.Defense Evasion
+    - attack.T1218
