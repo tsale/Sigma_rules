@@ -1,0 +1,29 @@
+title: Extract Credentials From IIS Application Pool Configuration Files
+id: cf6cd798-1933-4eb1-9ab7-2c9acc237104
+description: Detects the execution of appcmd.exe that is used to extract credentials from configuration files. IIS application pools can run as different users for security and isolation purposes. When a user is specified for the application pool, their credentials are stored in plaintext in the configuration file.
+status: experimental
+date: 2023/09/04
+author: \@kostastsale
+references:
+    - https://github.com/mpgn/CrackMapExec/pull/62
+logsource:
+    category: process_creation
+    product: windows
+detection:
+    selection1:
+        Image|endswith:
+            - '\appcmd.exe'
+        ParentImage|endswith:
+            - '\powershell.exe'
+            - '\cmd.exe'
+        CommandLine|contains|all:
+            - ' list '
+            - ' apppool '
+            - '/@t*:'
+    condition: selection1
+falsepositives:
+    - Unlikely
+level: high
+tags:
+    - attack.CredentialAccess
+    - attack.T1552.001
