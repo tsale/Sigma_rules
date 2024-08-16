@@ -23,7 +23,10 @@ detection:
           - 'oledb32.dll'
           - ',OpenDSLFile '
           - '\Users\*\Downloads\' # you can adjust the path to the download directory or other directories accroding to your environment
-    condition: selection
+    selection2:
+        CommandLine|endswith:
+          - '.udl'
+    condition: selection1 and selection2
 falsepositives:
     - UDL files serve as a convenient and flexible tool for managing and testing database connections in various development and administrative scenarios
 level: medium
