@@ -14,7 +14,7 @@ logsource:
     category: process_creation
     product: windows
 detection:
-    selection:
+    selection1:
         ParentImage|endswith:
           - '\explorer.exe'
         Image|endswith:
@@ -22,7 +22,8 @@ detection:
         CommandLine|contains|all:
           - 'oledb32.dll'
           - ',OpenDSLFile '
+          - '\Users\*\Downloads\' # you can adjust the path to the download directory or other directories accroding to your environment
     condition: selection
 falsepositives:
-    - Unknown
-level: high
+    - UDL files serve as a convenient and flexible tool for managing and testing database connections in various development and administrative scenarios
+level: medium
