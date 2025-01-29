@@ -4,7 +4,7 @@ status: Experimental
 description: Detects the initial execution of cmd.exe which spawns explorer.exe with the appropriate command line arguments for opening the My Computer folder. 
 author: '@Kostastsale'
 references: 
-  - 
+  - https://x.com/Kostastsale/status/1605875345088925696
 date: 2022/12/22
 logsource:
   product: windows
